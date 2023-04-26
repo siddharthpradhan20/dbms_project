@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Insert the data into the database
     $sql = "INSERT INTO appointment (Appt_id, Appt_Date, Cust_id, Location_id, VIN) VALUES ('$appt_id', '$appt_date', '$cust_id', '$location_id', '$vin')";
     if (mysqli_query($conn, $sql)) {
-        echo 'Employee Registration successful';
+        echo 'Appointment has been confirmed!';
     } else {
         echo 'Error: ' . $sql . '<br>' . mysqli_error($conn);
     }
